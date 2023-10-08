@@ -1,0 +1,129 @@
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 70vh;
+    width: 100%;
+    background-image: url('https://github.com/Meirelis/PEI/blob/main/Daily-Solution/img/academia.jpg?raw=true');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.topo{
+    background-color: #d9d9d9;
+    height: 100px;
+    padding-right: 85px;
+    display: flex;
+    padding-left: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo{
+    height: 100px;
+    width: 100px;
+    background-image: url('../img/logo.png');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    padding-left: 250px;
+
+}
+
+
+
+.usuario{
+    height: 75px;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.usuario img{
+    height: 55px;
+    width: 55px;
+}
+
+.toldo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(247, 53, 53);
+    height: 100px;
+}
+.toldo h1{
+    color: white;
+    font-size: 55px;
+}
+
+.divisoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    
+}
+
+.treinos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 85px;
+    gap: 50px;
+    
+}
+.treinos h2{
+    font-size: 70px;
+    color: #ffffff;
+}
+.inferiores{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.671);
+    height: 50px;
+    width: 400px;
+    border-radius: 30px;
+   transition: 400ms;
+}
+.inferiores:hover{
+    background-color: #e91111;
+    transform: translateX(50px);
+
+}
+
+.treinos img{
+    margin-right: 50px ;
+    margin-left: 50px ;
+    height: 35px;
+    width: 35px;
+}
+
+
+footer{
+    color: rgb(218, 217, 217);
+    background-color: #e91111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9.7%;
+    height: 25px;
+}
+
+.mid{
+    width: 100%;
+    height: 100%;
+}
+
+.body img {
+    width: 100px;
+    height: 100px;
+}
+
+.inferiores {
+    color: rgb(255, 255, 255);
+}

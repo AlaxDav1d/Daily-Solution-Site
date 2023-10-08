@@ -1,0 +1,196 @@
+.animate__animated.animate__backInLeft {
+    --animate-duration: 600ms;
+  }
+*{
+    padding:0;
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+.topo{
+    background-color: #d9d9d9;
+    height: 140px;
+    padding-right: 85px;
+    display: flex;
+    padding-left: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 100px;
+}
+
+.logo{
+    height: 100px;
+    width: 100px;
+    background: url(../img/logo.png) no-repeat center;
+    background-size: 120px;
+    padding-left: 100px;
+    float: left;
+}
+
+.usuario{
+    height: 75px;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.usuario img{
+    width: 80px;
+    height: 80px;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 100%;
+    padding: 2%;
+    margin: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #b4b4b4;
+    width: 100px;
+    font-weight:bold;
+    border-radius: 10px;
+}
+.menu a:hover{
+    color:  #2966bd;
+}
+
+.bloco-top{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+
+.bloco-middle{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.bloco-bottom{
+    
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.bloco-top-quadrado1{
+    background-color: #d9d9d9;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 2.5%;
+    border-radius: 12% 0% 18% 0%
+}
+
+.topicos{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.bloco-top-quadrado1 a{
+    height: 50px;
+    width: 50%;
+    background-color: #ce2f2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.bloco-top-quadrado1 a:hover{
+    background-color: aliceblue;
+    color: #ce2f2f;
+}
+
+footer{
+    color: rgb(218, 217, 217);
+    background-color: #ce2f2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    height: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+    
+}
+
+a:hover{
+    color: #ce2f2f;
+}
+
+.como-fazer:hover{
+    background-color: white;
+    transition: 0.25s;
+}
+
+.treino{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 4.2%;
+}
+
+.treino-a{
+    height: 40px;
+    width: 28%;
+    background-color:#d9d9d9;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container-imagens img{
+    border-radius: 12% 0% 18% 0%
+}
+
+.container-imagens{
+    max-width: 100%;
+}
+
+.container-texto{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 5% ;
+}
+
+.texto{
+    width: 50%;
+    height: 60px;
+    background-color: #d9d9d9;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
