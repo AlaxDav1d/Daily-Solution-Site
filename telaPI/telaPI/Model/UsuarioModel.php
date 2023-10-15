@@ -74,17 +74,19 @@
             return $retorno;
         }
         public function nomePeloID(){
-            $retorno = ['status' =>0,'dados' => null];
+            $retorno = ['status' =>0,'dados' => null,'meta' => null];
 
             try{
-                $query = $this->db->prepare('SELECT nome_completo FROM usuarios where id = :id ');
+                $query = $this->db->prepare('SELECT nome_completo,foco FROM usuarios where id = :id ');
                 
                 $query->bindValue(':id',$this->id);
                 $query->execute();
                 $dados1 = $query->fetch();
                 $dados = $dados1['nome_completo'];
+                $meta = $dados1['foco'];
                 $retorno['status'] = 1;
                 $retorno['dados'] = $dados;
+                $retorno['meta'] = $meta;
                 
             }catch(PDOException $e){
                 echo 'Erro ao listar Usuario pelo ID'.$e->getMessage();

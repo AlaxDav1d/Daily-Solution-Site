@@ -90,6 +90,10 @@ body{
     border-radius: 30px;
    transition: 400ms;
 }
+h3{
+    text-decoration: none;
+}
+
 .inferiores:hover{
     background-color: #e91111;
     transform: translateX(50px);

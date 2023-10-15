@@ -4,62 +4,6 @@
     box-sizing: border-box;
 }
 
-.topo{
-    background-color: #d9d9d9;
-    height: 140px;
-    padding-right: 85px;
-    display: flex;
-    padding-left: 50px;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 100px;
-}
-
-.logo{
-    height: 100px;
-    width: 100px;
-    background: url(../img/logo.png) no-repeat center;
-    background-size: 120px;
-    padding-left: 100px;
-    float: left;
-}
-
-.usuario{
-    height: 75px;
-    width: 75px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.usuario img{
-    width: 80px;
-    height: 80px;
-}
-
-.menu{
-    display: flex;
-}
-
-.menu a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    font-size: 100%;
-    padding: 2%;
-    margin: 12px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #b4b4b4;
-    width: 100px;
-    font-weight:bold;
-    border-radius: 10px;
-}
-.menu a:hover{
-    color:  #2966bd;
-}
-
 
 .bloco-top{
     display: flex;

@@ -8,24 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal</title>
     <link rel="stylesheet" href="css/bemestar.css">
+    <link rel="stylesheet" href="css/geral.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
     <header>
         <div class="topo">
-            <h1 class="logo"></h1>
-
-            <div class="menu">
-           
-                <a href="bemestar.html">Saúde</a>
-                <a href="recomendacoes.html">Alimento</a>
-                <a href="treinodia.html">Exercício</a>
-        
-        </div>    
-            <div class="usuario">
-                <img src="./img/usuario.png">
-                <span>Usuário</span>
-             </div>
+            <input type="hidden" id="idTxt" value='<?php echo $id ?>'>
+            
+          <a href="cadastroPi.html"><img src="https://github.com/Meirelis/PEI/blob/main/Daily-Solution/img/logo.png?raw=true" alt="logo Daily Solution"></a>
+          <div class="menu">
+            <a href="bemestar.html">Saúde</a>
+            <a href="recomendacoes.html">Alimento</a>
+            <a href="superiores.html">Exercício</a>
+        </div>
+          <div class="nomeUser">
+                <h2 id="ola" >Bem Vindo</h2>
+                <p id="user"></p>   
+          </div>
         </div>
     </header>
 
@@ -35,19 +36,19 @@
             <div class="bloco-top-quadrado1">
                 <img src="./img/saude.jpg" alt="" height="70%" width="90%">
                 <p class="topicos">Saúde</p>
-                <div class="leia-mais"><a href="#">Leia mais</a></div>
+                <a  onclick="saude()" >Leia mais</a>
             </div>
 
             <div class="bloco-top-quadrado1">
                 <img src="./img/alimento.jpg" alt="" height="70%" width="90%">
                 <p class="topicos">Alimento</p>
-                <div class="leia-mais"><a href="#">Leia mais</a></div>
+                <a  onclick="alimento()" >Leia mais</a>
             </div>
 
             <div class="bloco-top-quadrado1">
                 <img src="./img/ansiedade.jpg" alt="" height="70%" width="90%">
                 <p class="topicos">Ansiedade</p>
-                <div class="leia-mais"><a href="#">Leia mais</a></div>
+                <a  onclick="ansiedade()" >Leia mais</a>
             </div>
 
         </div>
@@ -56,19 +57,19 @@
             <div class="bloco-top-quadrado1">
                 <img src="./img/depressao.jpg" alt="" height="70%" width="90%">
                 <p class="topicos">Depressão</p>
-                <div class="leia-mais"><a href="#">Leia mais</a></div>
+                <a onclick="depressao()">Leia mais</a>
             </div>
 
             <div class="bloco-top-quadrado1">
                 <img src="./img/sono.jpg" alt="" height="70%" width="90%">
                 <p class="topicos">Sono</p>
-                <div class="leia-mais"><a href="#">Leia mais</a></div>
+                <a  onclick="sono()" >Leia mais</a>
             </div>
 
             <div class="bloco-top-quadrado1">
                 <img src="./img/exercicio.jpg" alt="" height="70%" width="90%">
                 <p class="topicos">Exercício</p>
-                <div class="leia-mais"><a href="#">Leia mais</a></div>
+                <a href="../View/treinodia.html">Nossa página</a>
             </div>
 
         </div>
@@ -77,5 +78,10 @@
     <footer>Daily Solution © 2023 - Todos os Direitos Reservados</footer>
 
 </body>
+
+<script src="../js/inner.js">
+         
+
+</script>
 
 <!-- ARRUMAR A IMAGEM DO USUARIO NO HEADER -->

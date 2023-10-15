@@ -1,0 +1,66 @@
+.animate__animated.animate__backInLeft {
+    --animate-duration: 600ms;
+  }
+  .swal2-popup{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+.menu{
+     display: flex;
+ }
+ .menu a{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: black;
+     font-size: 100%;
+     padding: 2%;
+     margin: 12px;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     background-color: #b4b4b4;
+     width: 30vh;
+     font-weight:bold;
+     border-radius: 10px;
+     text-decoration: none;
+     transition: 600ms;
+ }
+ .menu a:hover{
+     color:  #fff;
+     background-color: #2966bd;
+ }
+.topo{
+     background-color: #d9d9d9;
+     height: 140px;
+     padding: 1%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;   
+ }
+ .topo img{
+     width: 15vh;
+     height: 15vh;
+ }
+ footer{
+    color: rgb(218, 217, 217);
+    background-color: #2966bd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    height: 25px;
+}
+
+.bloco-top-quadrado1 a{
+    height: 50px;
+    width: 50%;
+    background-color: #0049b0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.bloco-top-quadrado1 a:hover{
+    background-color: aliceblue;
+    color: #0049b0;
+}

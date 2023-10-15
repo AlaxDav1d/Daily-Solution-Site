@@ -227,7 +227,6 @@
                                             })               
                                         }//FIM da config 
                                         console.log(config);
-                                        alert('sla mundo')
                                         const enviado =await fetch('Controller/usuarios/confEmailTelefone.php',config);
                                         const recebido =await enviado.json();
                                         const linha =recebido.dados;
@@ -237,17 +236,20 @@
                                             if(response.status == 1){
                                                 alert('usuario cadastrado com sucesso');
                                                 switch(meta){
+                                                    case '"musculo"':
+                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?meta=musculo&nome_completo=${nomeCompleto}`);            
+                                                         break;
                                                      case'"cardio"':
-                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?nome_completo=${nomeCompleto}`);
-
+                                                        alert(meta);
+                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?meta=cardio&nome_completo=${nomeCompleto}`);
+                                                         break;
                                                      case '"resistencia"':
-                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?nome_completo=${nomeCompleto}`);
-
+                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?meta=perna&nome_completo=${nomeCompleto}`);
+                                                        break;
                                                      case'"saude"':
-                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?nome_completo=${nomeCompleto}`);
-
-                                                     case '"musculo"':
-                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?nome_completo=${nomeCompleto}`);            
+                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?meta=saude&nome_completo=${nomeCompleto}`);
+                                                        break;
+                                                     
                                                      }//fim do switch case
                                                 
                                             }else if(confSenha == "" && senha == ""){

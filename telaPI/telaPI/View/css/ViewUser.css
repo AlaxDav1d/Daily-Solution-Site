@@ -5,54 +5,6 @@
     box-sizing: border-box;
 }
 
-.menu{
-    display: flex;
-}
-.menu a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    font-size: 100%;
-    padding: 2%;
-    margin: 12px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #b4b4b4;
-    width: 100px;
-    font-weight:bold;
-    border-radius: 10px;
-}
-.menu a:hover{
-    color:  #2966bd;
-}
-
-.topo{
-    background-color: #d9d9d9;
-    height: 140px;
-    padding: 1%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-.topo img{
-    width: 15vh;
-    height: 15vh;
-}
-
-.logo{
-    height: 100px;
-    width: 100px;
-    background: url(../img/logo.png) no-repeat center;
-    background-size: 120px;
-    padding-left: 250px;
-    float: left;
-}
-.form{
-    display: flex;
-    align-items: center;  
-    flex-direction: column;
-}
 .botao{
     height: 3vh;
     width: 7vh;
@@ -73,10 +25,7 @@ button{
     background-color: #2966bd; 
     color: #fff;
 }
-.container-mid{
-    height: 500px;
-    background-color: #ffffff;
-}
+
 .container-azul{
     height: 55vh;
     margin: 10vh 0; 
@@ -106,19 +55,17 @@ button{
     padding: 3%;
     font-size: 20px;
 }
-
-footer{
-    color: rgb(218, 217, 217);
-    background-color: #2966bd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    height: 25px;
-}
 h2{
     margin-bottom: 2%;
     font-size: 150%;
+}
+.hints{
+    overflow: hidden;   
+}
+
+.hints h2{
+    margin-left: 3%;
+    font-size: 170%;
 }
 .textoAjuda{
     height: 100%;
@@ -133,29 +80,60 @@ h2{
     font-size: xx-large;
     width: 20%;
 }
+.some{
+    height: 0;
+    background-color: transparent;
+
+    transition: 700ms;
+    transform: translateY(-250px) scale(1%);
+}
+.aparece{
+    height: 100;
+    opacity: 1;
+    transition: 700ms;
+    transform: scale(100%);
+}
+
 .carousel{
      display: flex;
-     justify-content: space-around;
+     justify-content: space-between;
 }
+
 .boxHints{
      display: flex;
-     overflow: hidden;
      justify-content: center;
      align-items: center;
      width: 100%;
+     margin-top: -3%;
 }
 .box{
-     height: 55vh;
-     width: 50vh;
+     height: 80vh;
+     width: 30%;
      margin: 10vh;
-     background-color: #b4b4b4;
+     background-color: #2966bd;
      display: flex;
      flex-direction: column;
      align-items: center;
-     
+     border-top-left-radius: 8%;
+    border-bottom-right-radius: 9%;
+    border: 1px solid ;
+}
+.box img{
+    height:60%;
+    width: 100%;
+    border-top-left-radius: 8%;
+    border-bottom: 1px solid;
+}
+.textBox{
+    font-size: 120%;
+    padding: 5%;
+    color: #fff;
+}
+.textBox p{
+    color: #b4b4b4;
+    text-transform: capitalize;
 }
 .nao{
-
      transform:translate(500vh) scale(0%);
      position: absolute;
      transition: 1.5s;
@@ -165,64 +143,29 @@ h2{
      justify-content: center;
      transition: 2s;
 }
-
-.botoes{
-    display: flex;
-    justify-content: space-between;
-}
-.foco{
-    display: flex;
-    flex-direction: column;
-    width: 20vh;
-    gap: 10%;
-    margin: 2% 0;  
-}
-.campo{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 5%;    
-}
 .textoMid{
     width: 150vh;
-}
-
-.some{
-    height: 0;
-    opacity: 0;
-    transition:1s;
-    transform: translateY(-300px) scale(1%);
-}
-.aparece{
-    height: 100;
-    opacity: 1;
-    transition: 1s;
-    transform: scale(100%);
-}
-.add{
-    opacity: 1;
-    position: absolute;
-}
-.a{
-    opacity: 0;
-}
-.config{
-    height: 10%;
-    width: 20%;
-}
-.config1{
-    display: flex;
-    justify-content: flex-end;
 }
 .nomeUser{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: larger;
 }
 .nomeUser h2{
     color: #2966bd;
 }
-.nomeUser p{
-    font-size: large;
+.treinosUser{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+    border-top:  2px dotted black;
 }
+.treinosUser h3{
+    color: red;
+    margin-left: 3%;
+    font-size: x-large;
+}
+
     
