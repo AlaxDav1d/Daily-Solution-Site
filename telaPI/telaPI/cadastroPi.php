@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="View/css/sweetalert2.min.css" type="text/css"/>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
         <link rel="stylesheet" href="View/css/cadastro.css">
         <title>Daily Solution</title>
     </head>
@@ -151,7 +153,6 @@
                         }else if(senha == ""){
                             alert('campos vazios')
                         }else{
-
                         const config = {
                         method: "post",
                         headers:{
@@ -165,13 +166,18 @@
             }
             const request = await fetch('Controller/Login/logar.php',config);
             const response =await request.json();
-            alert(response.dados);
             
             if(response.status ===  1){
                 alert('login efetuado com sucesso');
-                window.location.href = `./View/viewUserId.php?id=${response.dados}`
+                window.location.href = `./View/viewUserId.php?id=${response.dados}&meta=${response.meta}&nome=${response.sla}`
             }else{
-                alert('erro ao realizar login');
+                Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: '<span id="click2" class="click">Criar Novo Usuario</span>'
+})
+
             }}
             //fim da parte de logiin
                     })
@@ -179,6 +185,8 @@
                     const msg =document.getElementById('msg');
                     const secondMsg = document.getElementById('msgSenha');
                     e.preventDefault();
+
+                    //INICIO DO BLOCO QUE PEGA AS INFORMAÇÕES DO INPUT:RADIO
                     var genero = document.getElementsByName("sexo");
                     var i;
                     for(i=0;i<=genero.length;i++){
@@ -188,8 +196,6 @@
                             break
                         }
                     };
-                    
-     
                     var foco = document.getElementsByName("foco");
                     var j;
                     for(j=0;j<=foco.length;j++){
@@ -198,7 +204,7 @@
                             break
                         }
                     };
-
+                    //FIM DO BLOCO INPUT:RADIO
 
                     const nomeCompleto = $('#nomeCompletoTxt').val();
                     const email = $('#emailTxt').val();
@@ -237,17 +243,17 @@
                                                 alert('usuario cadastrado com sucesso');
                                                 switch(meta){
                                                     case '"musculo"':
-                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?meta=musculo&nome_completo=${nomeCompleto}`);            
+                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?meta=musculo&nome_completo=${nomeCompleto}&id=465456321564564564654`);            
                                                          break;
                                                      case'"cardio"':
                                                         alert(meta);
-                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?meta=cardio&nome_completo=${nomeCompleto}`);
+                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?meta=cardio&nome_completo=${nomeCompleto}&id=465456321564564564654`);
                                                          break;
                                                      case '"resistencia"':
-                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?meta=perna&nome_completo=${nomeCompleto}`);
+                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?meta=perna&nome_completo=${nomeCompleto}&id=465456321564564564654`);
                                                         break;
                                                      case'"saude"':
-                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?meta=saude&nome_completo=${nomeCompleto}`);
+                                                         Swal.fire('Atenção!','Usuario cadastrado com sucesso','sucess').then(res=>window.location.href = `./View/viewUser.php?meta=saude&nome_completo=${nomeCompleto}&id=465456321564564564654`);
                                                         break;
                                                      
                                                      }//fim do switch case
@@ -272,6 +278,18 @@
             var click = document.getElementById('click');
             click.addEventListener('click',function(){
                 msg.classList.remove('mostraMsg')
+                if(form.classList.contains('some')){
+                form.classList.remove('some')
+                form.classList.add('aparece')
+            }else{
+                form.classList.add('some')
+                form.classList.remove('aparece')
+            }
+            })
+
+            var click2 =document.getElementById('click2');
+            click.addEventListener('click2',function(){
+                
                 if(form.classList.contains('some')){
                 form.classList.remove('some')
                 form.classList.add('aparece')

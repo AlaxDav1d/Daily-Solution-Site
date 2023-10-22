@@ -4,62 +4,6 @@
     box-sizing: border-box;
 }
 
-.topo{
-    background-color: #d9d9d9;
-    height: 140px;
-    padding-right: 85px;
-    display: flex;
-    padding-left: 50px;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 100px;
-}
-
-.logo{
-    height: 100px;
-    width: 100px;
-    background: url(../img/logo.png) no-repeat center;
-    background-size: 120px;
-    padding-left: 100px;
-    float: left;
-}
-
-.usuario{
-    height: 75px;
-    width: 75px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.usuario img{
-    width: 80px;
-    height: 80px;
-}
-
-.menu{
-    display: flex;
-}
-
-.menu a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-    font-size: 100%;
-    padding: 2%;
-    margin: 12px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #b4b4b4;
-    width: 100px;
-    font-weight:bold;
-    border-radius: 10px;
-}
-.menu a:hover{
-    color:  #2966bd;
-}
-
 .bloco-top{
     margin-top: 3.5%;
     display: flex;
@@ -109,11 +53,6 @@ a:hover{
     color: #ce2f2f;
 }
 
-.como-fazer:hover{
-    background-color: white;
-    transition: 0.25s;
-}
-
 .treino{
     max-width: 100%;
     display: flex;
@@ -121,21 +60,6 @@ a:hover{
     padding-top: 4.2%;
 }
 
-.treino-a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.container-imagens img{
-    border-radius: 5%
-}
-
-.container-imagens{
-    max-width: 100%;
-}
 
 .container-texto{
     max-width: 100%;
@@ -168,25 +92,137 @@ a:hover{
     display: flex;
     width: 300px;
     height: 24px;
-    gap: 3%;
+    border: 1px solid;
 }
-
-input{
-    width: 250px;
-    height: 24px;
+.input button{
+    background-color: transparent;
+}
+.api input{
+    border: none;
+    background-color: transparent;
+    width: 20vh;
+    height: 3.2vh;
+}
+.blocoReceitas{
+    margin: 5% 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blocoReceitas button{
+    background-color: #fff;
+    height: 5vh;
+    font-size: medium;
+    width: 20vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.blocoReceitas button:hover{
     background-color: #d9d9d9;
 }
-
+.blocoReceitas input::placeholder{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cadastroReceita{
+    display: flex;
+    background-color: #21b122;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid #000;
+    width: 70%;
+    height: 90%;
+    padding: 1%;
+}
+.labels input{
+    padding: 2%;
+}
+.cadastroReceita h3{
+    color: #fff;
+    font-size: x-large;
+}
+.title{
+    margin-top: 2%;
+}
+#tituloTxt{
+    font-size: large;
+    text-transform: capitalize;
+    margin: 1% 0;
+}
+.cadastroReceita input{
+    width: 80%;
+    height: 60%;
+    margin: 2%;
+    margin-left: 0;
+    font-size: larger;
+    border:  double black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.cadastroReceita input::placeholder{
+    font-size: smaller;
+}
+.inputs{
+    display: flex;
+    width: 100%;
+    margin: 1% 0;
+}
+textarea{
+    height: 200%;
+    width: 110vh;
+    margin: 2% 0;
+    padding: 1%;
+}
+.cadastroReceita span,h3{
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 .container-api{
-   
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .api{
-    background-color: #b4b4b4;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 3%;
+    background-color: #dfdfdf;
     max-width: 100%;
     height: 500px;
     width: 40%;
+    overflow: auto;    
+}
+
+.api h2{
+    margin: 3% 0;
+    align-self: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.ingredientes{
+    margin: 1%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: capitalize;
+    font-size:large;
+}
+.comoFazer{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: larger;
+    margin: 5% 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#fazer{
+    display: flex;
+    padding: 1%;
+}
+.aviso{
+    width: 100%;
+    text-shadow: 1px 0.1px black;
+    font-size: x-large;
+    align-self: first baseline;
+    justify-self: first baseline;
+    color: #dfdfdf;
 }

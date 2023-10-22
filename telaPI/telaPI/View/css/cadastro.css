@@ -271,7 +271,6 @@ form span{
  .some{
      height: 0;
      background-color: transparent;
-
      transition: 700ms;
      transform: translateY(-250px) scale(1%);
  }

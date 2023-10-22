@@ -1,6 +1,8 @@
 
 <?php
-     $id = $_GET['id'];
+    $id = $_GET['id'];
+    $meta = $_GET['meta'];
+    $nome = $_GET['nome'];  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,36 +22,26 @@
         <header>
                 <div class="topo">
                     <input type="hidden" id="idTxt" value='<?php echo $id ?>'>
+                    <input type="hidden" id="metaTxt" value='<?php echo $meta ?>'>
+                     
+                       
                     
-                  <a href="cadastroPi.html"><img src="https://github.com/Meirelis/PEI/blob/main/Daily-Solution/img/logo.png?raw=true" alt="logo Daily Solution"></a>
+                    <button id="logoBtn"><img src="https://github.com/Meirelis/PEI/blob/main/Daily-Solution/img/logo.png?raw=true" alt="logo Daily Solution"></button>
+ 
                   <div class="menu">
-                    <a href="bemestar.html">Saúde</a>
-                    <a href="recomendacoes.html">Alimento</a>
-                    <a href="superiores.html">Exercício</a>
+                    <button id="bemestar" class="botao">Saúde</button>
+                    <button id="alimento" class="botao">Alimento</button>
+                    <button id="exercicio" class="botao">Exercício</button>
                 </div>
                   <div class="nomeUser">
                         <h2 id="ola" >Bem Vindo</h2>
-                        <p id="user"></p>   
+                        <input type="text" id="nomeTxt" value='<?php echo $nome?>'  disabled>
                   </div>
                 </div>
         </header>
         <!--Fim cabeçalho-->
         <!--Inicio container azul-->
-        <div class="container-azul">
-            <div class="textoAjuda aparece">
-                <p>Pegou sua garrafa da água??</p>
-            </div>
-            <div class="textoAjuda some">
-                <p>
-                    Esta vestido com roupas confortaveis?
-                </p>
-            </div>
-            <div class="textoAjuda some">
-                <p>
-                    Também não se esqueça de se alongar antes do treino
-                </p>
-            </div>
-        </div>
+
 
          <!--Fim container azul-->
         <div class="container-texto">
@@ -63,75 +55,53 @@
                 Aqui estão algumas dicas diarias para te ajudar:
             </h2>
             <div class="boxHints">
-                <div class="carousel nao" id="car1">
+                <div class="carousel some" id="car1">
                     <div class="box">
-                        <img src="https://cdn.pixabay.com/photo/2016/08/31/07/28/water-1632785_1280.jpg" alt="">
+                        <img src="https://img.freepik.com/free-photo/portrait-young-fitness-woman-earphones_171337-6257.jpg?size=626&ext=jpg&uid=P29772696&ga=GA1.2.981952496.1695169077&semt=ais" alt="">
                         <div class="textBox">
-                            <h3>Tente beber no minímo 2L de água por dia</h3>
-                            <p>ainda mais em dias quentes</p>
+                            <h3>Hidrata-se</h3>
+                            <p>Hidratação é a chave! Beba água suficiente antes do treino para garantir um desempenho máximo.</p>
                         </div>  
                     </div>
                     <div class="box">
-                        <img src="https://cdn.pixabay.com/photo/2016/04/06/13/32/sleeping-1311784_1280.jpg" alt="">
+                        <img src="https://img.freepik.com/free-photo/back-view-young-athletic-dark-skinned-curly-brunette-female-stretching-her-hands-while-posing-black-sporty-top-fitness-female-model_295783-5616.jpg?size=626&ext=jpg&uid=P29772696&ga=GA1.2.981952496.1695169077&semt=sph" alt="">
                         <div class="textBox">
-                            <h3>Tente dormir pelo menos 7 horas por dia</h3>
-                            <p>Uma boa noite de sono te ajuda a aliviar o estresse</p>
+                            <h3>Alongamento</h3>
+                            <p>Aqueça seu corpo com alguns minutos de alongamento antes de começar o treino.</p>
                         </div>
                     </div>
                     <div class="box">
-                        <img src="https://cdn.pixabay.com/photo/2016/08/31/07/28/water-1632785_1280.jpg" alt="">
+                        <img src="https://img.freepik.com/free-photo/fit-blond-woman-with-perfect-smile-stylish-sportswear-looking-camera-holding-bottle-water-white-wall-demonstrate-muscles_273443-4534.jpg?size=626&ext=jpg&uid=P29772696&ga=GA1.2.981952496.1695169077&semt=ais" alt="">
                         <div class="textBox">
-                            <h3>Tente beber no minímo 2L de água por dia</h3>
-                            <p>ainda mais em dias quentes</p>
-                        </div>
-                    </div> 
-                </div>
-                <div class="carousel sim" id="car2">
-                    <div class="box">
-                        <img src="https://cdn.pixabay.com/photo/2016/08/31/07/28/water-1632785_1280.jpg" alt="">
-                       <div class="textBox">
-                            <h3>Tente beber no minímo 3L de água por dia</h3>
-                            <p>ainda mais em dias quentes</p>
-                       </div>
-                    </div>
-                    <div class="box">
-                        <img src="https://cdn.pixabay.com/photo/2016/08/31/07/28/water-1632785_1280.jpg" alt="">
-                       <div class="textBox">
-                            <h3>Tente beber no minímo 3L de água por dia</h3>
-                            <p>ainda mais em dias quentes</p>   
-                       </div>
-                    </div>
-                    <div class="box">
-                        <img src="https://cdn.pixabay.com/photo/2016/08/31/07/28/water-1632785_1280.jpg" alt="">
-                       <div class="textBox">
-                            <h3>Tente beber no minímo 3L de água por dia</h3>
-                            <p>ainda mais em dias quentes</p>
-                       </div>
-                    </div> 
-                </div>
-                <div class="carousel nao" id="car3">
-                    <div class="box">
-                        <img src="../View/img/Afundo.jpg" alt="">
-                        <div class="textBox">
-                            <h3>Tente beber no minímo 4L de água por dia</h3>
-                            <p>ainda mais em dias quentes</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <img src="https://cdn.pixabay.com/photo/2016/08/31/07/28/water-1632785_1280.jpg" alt="">
-                        <div class="textBox">
-                            <h3>Tente beber no minímo 4L de água por dia</h3>
-                            <p>ainda mais em dias quentes</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <img src="https://cdn.pixabay.com/photo/2016/08/31/07/28/water-1632785_1280.jpg" alt="">
-                        <div class="textBox">
-                            <h3>Tente beber no minímo 4L de água por dia</h3>
-                            <p>ainda mais em dias quentes</p>
+                            <h3>Vestimento</h3>
+                            <p>Vista roupas adequadas e calçados confortáveis para um treino sem complicações.</p>
                         </div>
                     </div> 
                 </div>
+                <div class="carousel aparece" id="car2">
+                    <div class="box">
+                        <img src="https://img.freepik.com/free-photo/woman-preparing-her-juice-recipe_23-2149257556.jpg?size=626&ext=jpg&uid=P29772696&ga=GA1.2.981952496.1695169077&semt=sph" alt="">
+                       <div class="textBox">
+                            <h3>Alimentação</h3>
+                            <p>Coma uma refeição leve pelo menos uma hora antes do treino para obter energia suficiente.</p>
+                       </div>
+                    </div>
+                    <div class="box">
+                        <img src="https://img.freepik.com/free-psd/3d-rendering-cosmetic-product_23-2149929596.jpg?size=626&ext=jpg&uid=P29772696&ga=GA1.2.981952496.1695169077&semt=ais" alt="">
+                       <div class="textBox">
+                            <h3>Protetor Solar</h3>
+                            <p>Proteja-se do sol e use protetor solar se estiver treinando ao ar livre.</p>   
+                       </div>
+                    </div>
+                    <div class="box">
+                        <img src="https://img.freepik.com/free-photo/people-sport-music-concept-pleasant-looking-woman-with-healthy-skin-wears-casual-top-smartwatch-concentrated-inn-screen-smart-phone-listens-favourite-song-headphones-likes-gymnastics_176532-6673.jpg?size=626&ext=jpg&uid=P29772696&ga=GA1.2.981952496.1695169077&semt=ais" alt="">
+                       <div class="textBox">
+                            <h3>Fone de ouvido</h3>
+                            <p>Música energizante pode ser um ótimo companheiro durante o treino.</p>
+                       </div>
+                    </div> 
+                </div>
+                
             </div>
         </div>
        <div class="treinosUser">
@@ -152,51 +122,72 @@
         <script src="../js/jquery-3.6.0.min.js" type="text/javascript"></script>
         <script src="../js/sweetalert2.all.min.js"></script>
         <script src="../js/inner.js"></script>
+        <script src="../js/userName.js"></script>
+
+        
         <script type="text/javascript" charset="utf-8">
-            window.setInterval(avancar,3000);   
-            window.setInterval(frente,4000);
+            
+            $(document).ready(async function(){await exibeNome()})
+
+        const idTxt = $('#idTxt').val();
+        var nome = $('#nomeTxt').val();
+        $('#bemestar').on('click',(res=>window.location.href = `bemestar.php?id=${idTxt}&meta=${meta}&nome=${nome}`));
+        $('#alimento').on('click',(res=>window.location.href = `recomendacoes.php?id=${idTxt}&meta=${meta}&nome=${nome}`));
+        $('#exercicio').on('click',(res=>window.location.href = `treinodia.php?id=${idTxt}&meta=${meta}&nome=${nome}`));
+  //FIM DO SWITCH
+
             $('#ola').on('click',function(){alert('VMZ fica melhor de HeadPhone')});
-            var user = document.getElementById('user');
-            const idTxt = $('#idTxt').val();
-                $(document).ready(async function(){await carregarUser()})
-                async function carregarUser(){
-                    alert(idTxt);
-
-                  const config ={
-                    method:'post',
-                    headers:{
-                      'Accept': 'application/json',
-                      'Content-Type':'application/json'
-                    },
-                    body:JSON.stringify({
-                      idT:idTxt
-                    })
-                  };
-                console.log(config);
-                const request =await fetch('../Controller/usuarios/listarNomePeloId.php',config);      
-                const response = await request.json();
-                console.log(response.meta);
-                dados = response['dados'];
-                const meta =response['meta'];
-                alert(meta);
-                user.innerHTML = dados;
-                switch(meta){
-                    case('"musculo"'):
-                        musculo();
-                        break;
-                    case('"cardio"'):
-                        cardio();
-                        break;
-                    case('"perna"'):
-                        perna();
-                        break;
-                    case('"saude"'):
-                        saude();
-                        break;
-                }
-
-
-            }
+ 
         </script>
+         <script>
+            window.setInterval(slider,3000)
+            function slider(){
+                var carousel1 = document.getElementById('car1');
+                var carousel2 = document.getElementById('car2');
+        
+                if(carousel1.classList.contains('some')){
+                carousel2.classList.remove('aparece');
+                carousel2.classList.add('some');
+                carousel1.classList.remove('some');
+                carousel1.classList.add('aparece');
+
+            }else{
+                carousel2.classList.remove('some');
+                carousel2.classList.add('aparece');
+                carousel1.classList.remove('aparece');
+                carousel1.classList.add('some');
+            }
+           
+            }
+            
+        </script>
+            <script type="text/javascript" charset="utf-8">
+
+$('#ola').on('click',function(){alert('VMZ fica melhor de HeadPhone')});
+const fim =document.getElementById('fim');
+var user = document.getElementById('user');
+var meta =$('#metaTxt').val();
+
+console.log(meta);
+alert(meta);
+
+console.log(nome);
+switch(meta){
+    case('"musculo"'):
+        musculo();
+        break;
+    case('"cardio"'):
+        cardio();
+        break;
+    case('"perna"'):
+        perna();
+        break;
+    case('"saude"'):
+        saude();
+        break;
+}
+
+
+</script>
 
 </html>

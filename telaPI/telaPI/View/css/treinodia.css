@@ -11,41 +11,6 @@ body{
     background-size: 100%;
     background-repeat: no-repeat;
 }
-.topo{
-    background-color: #d9d9d9;
-    height: 100px;
-    padding-right: 85px;
-    display: flex;
-    padding-left: 25px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-.logo{
-    height: 100px;
-    width: 100px;
-    background-image: url('../img/logo.png');
-    background-repeat: no-repeat;
-    background-size: 40%;
-    padding-left: 250px;
-
-}
-
-
-
-.usuario{
-    height: 75px;
-    width: 75px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.usuario img{
-    height: 55px;
-    width: 55px;
-}
 
 .toldo{
     display: flex;

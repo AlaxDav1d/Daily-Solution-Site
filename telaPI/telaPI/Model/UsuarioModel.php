@@ -1,3 +1,4 @@
+
 <?php
     class UsuarioModel{
         public $db = null;
@@ -39,31 +40,45 @@
             }
             return $retorno;
         }
+      public function retornaId(){
+            $retorno = ['status'=> 0,'dados'=> null];
+            try{
+                $varNova = $this->nomeCompletoModel;
+
+                $dados =  $this->db->prepare("SELECT id FROM usuarios WHERE  nome_completo ='$varNova' ");
+                $dados->execute();
+                $volta = $dados->fetch();
+                 
+                $retorno['status'] = 1;
+                $retorno['dados'] = $volta;
+
+
+            }catch(PDOException $e){
+                echo 'listar I'.$e->getMessage();
+            }
+            return $retorno;
+        }
         public function logar() {
 
             $retorno = ['status' => 0, 'dados' => null];
     
             try {
                 $stmt = $this->db->prepare('
-                SELECT id, email FROM usuarios
+                SELECT id, email,foco,senha FROM usuarios
                 WHERE email = :email
-                AND senha = :senha
                 LIMIT 1
-                
                 ');
                 $stmt->bindValue(':email', $this->emailModel);
-                $stmt->bindValue(':senha', $this->senhaModel);
+
                 $stmt->execute();
                 $dado = $stmt->fetch();
-    
-                if ($dado['id'] && $dado['id'] > 0) {
+                $sal = $this->senhaModel;
+                if ($dado['senha'] == $sal) {
                     $retorno['status'] = 1;
                     $retorno['dados'] = $dado['id'];
-
-                    session_start();
-                    $_SESSION['logado'] = true;
-                    $_SESSION['id_usuario'] = $dado['id'];
-                    $_SESSION['usuario'] = $dado['email'];
+                    $retorno['sla'] = $dado['email'];
+                    $retorno['meta'] = $dado['foco'];
+                    $retorno['senha'] = $dado['senha'];
                 }else{
                     $retorno['status'] = 2;
                 }
